@@ -1,38 +1,146 @@
-.App {
+.weather-app-wrapper {
+  max-width: 470px;
+  margin: 15px;
+}
+
+.weather-app {
+  max-width: 100%;
+  box-shadow: 5px 5px 15px #adaca1;
+  border: 5px solid #ffffff;
+  border-radius: 25px;
+  padding: 20px;
+  margin-top: 20px;
+  background-image: linear-gradient(
+    to top,
+    #d5d4d0 0%,
+    #ffffff 1%,
+    #f7f7f7 31%,
+    #fffaf0 100%
+  );
+}
+
+.city {
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 50px;
+  color: #32333e;
+
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 3px;
+}
+
+.today {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 3px;
+  color: #32333e;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-top: 0px;
+}
+
+.next-days {
+  border: solid 2px white;
+  box-shadow: 3px 3px 10px #adaca1;
+  border-radius: 10px;
+  padding-top: 8px;
+  font-family: "Varela Round", sans-serif;
+  font-size: 13px;
+  background: #32333e;
+  margin-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  max-width: 100%;
+}
+
+.next-days:hover {
+  cursor: default;
+}
+
+.temperature {
+  font-size: 50px;
+  margin: 0;
+  margin-left: 15px;
+  color: #ff521b;
+  font-family: "Varela Round", sans-serif;
+}
+
+.icon {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: -80px;
+}
+
+.iconCurrent {
+  position: absolute;
+  margin-left: 230px;
+  margin-top: -55px;
+}
+
+.message {
+  font-size: 30px;
+  font-family: "Varela Round", sans-serif;
+  color: #32333e;
+  letter-spacing: 3px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.input {
+  box-shadow: 3px 3px 10px #adaca1;
+
+  font-family: "Varela Round", sans-serif;
+  font-size: 13px;
+  color: #77557a;
+  border: solid 2px white;
+  display: block;
+  margin: auto;
+  border-radius: 40px;
+  padding: 7px;
+}
+
+.searchButton {
+  display: block;
+  margin: auto;
+  box-shadow: 3px 3px 10px #adaca1;
+
+  font-family: "Varela Round", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 5px;
+  max-width: 400px;
+  border: solid 1px white;
+  border-radius: 40px;
+  padding: 9px 64px;
+  background: #1b84ff;
+}
+
+.myLocation {
+  font-size: 13px;
+  font-family: "Varela Round", sans-serif;
+  border: solid 1px white;
+  max-width: 100%;
+  border-radius: 40px;
+  box-shadow: 3px 3px 10px #adaca1;
+  background: #ffffff;
+  color: #77557a;
+  margin-top: 25px;
+  padding: 9px 33px;
+  display: block;
+  margin: auto;
+}
+
+.or {
+  font-size: 15px;
   text-align: center;
-}
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 3px;
+  color: #32333e;
+  margin-bottom: 20px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin-top: 0px;
 }
