@@ -126,8 +126,8 @@
   max-width: 100%;
   border-radius: 40px;
   box-shadow: 3px 3px 10px #adaca1;
-  background: #ffffff;
-  color: #77557a;
+  background: #32333e;
+  color: white;
   margin-top: 25px;
   padding: 9px 33px;
   display: block;
@@ -143,4 +143,39 @@
   margin-bottom: 20px;
 
   margin-top: 0px;
+}
+
+.open-source {
+  font-family: "Varela Round", sans-serif;
+  margin-left: 35px;
+
+  font-size: 16px;
+  transition: all 200ms ease-in-out;
+}
+
+.open-source:hover {
+  color: #ec4513;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 35px;
+}
+
+.website {
+  font-family: "Varela Round", sans-serif;
+
+  font-size: 16px;
+  transition: all 200ms ease-in-out;
+}
+
+.website:hover {
+  color: #ec4513;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.weather-app-wrapper {
+  max-width: 470px;
+  margin: 15px;
 }

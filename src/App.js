@@ -12,8 +12,9 @@ function App() {
  
 </div> 
     </div>
+   <a href="https://github.com/LeilaAfhim/react-weather-app" className="open-source">Open-source code </a>by <a href="https://www.leilaafhim.com" className="website">Leila Afhim</a> 
     </div>
-   
+
   );
 }
 
