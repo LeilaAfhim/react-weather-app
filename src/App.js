@@ -1,13 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Weather from "./Weather";
 
 
 function App() {
   return (
-        <div class="container" >
-        <div class="weather-app-wrapper">
-<div class="weather-app">
+        <div className="container" >
+        <div className="weather-app-wrapper">
+<div className="weather-app">
       <Weather/>
  
 </div> 
