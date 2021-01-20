@@ -11,11 +11,11 @@ export default function CurrentBrussels () {
 <p className="message">It's snowing</p>
 
       <div className="forecast">
-        <button class="next-days">
+        <button className="next-days">
             02/11
-            <div class="degree">13°C
+            <div className="degree">13°C
             <br/>
-                <img src="https://www.flaticon.com/svg/vstatic/svg/1200/1200430.svg?token=exp=1610880276~hmac=722ad0559e4253aa4080d6278f0ccfd3" width= "10px" class="forecastIcon" alt="iconForecast"/>
+                <img src="https://www.flaticon.com/svg/vstatic/svg/1200/1200430.svg?token=exp=1610880276~hmac=722ad0559e4253aa4080d6278f0ccfd3" width= "10px" className="forecastIcon" alt="iconForecast"/>
         </div>
         </button>
        </div>

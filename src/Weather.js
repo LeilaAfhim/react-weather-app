@@ -2,23 +2,30 @@ import React, {useState} from "react";
 import axios from "axios";
 import './App.css';
 import CurrentBrussels from "./CurrentBrussels";
+import FormattedDate from "./FormattedDate";
 
-export default function Weather (){
-      const [city, setCity] = useState("");
-  const [loaded, setLoaded] = useState(false);
-  const [weather, setWeather] = useState({});
+
+export default function Weather (props){
+const [city, setCity]= useState("");
+  const [weather, setWeather] = useState({loaded:false});
     
     function showTemperature(response) {
-      setCity (response.data.name);
-    setLoaded(true);
-    setWeather({
+      
+    setWeather ({
+      loaded: true,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      date: new Date(response.data.dt * 1000),
+      city: response.data.name,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });
   }  
+
+
+
+
 
 
     function handleSubmit(event){
@@ -33,8 +40,8 @@ export default function Weather (){
 
 
 function updateCity(event){
-    
-setCity(event.target.value);
+   
+ setCity(event.target.value);
 }
 
 
@@ -54,13 +61,15 @@ let form =
     </form>
 
 
-if (loaded){
+
+
+if (weather.loaded){
     return(    
     <div>
 {form}
 
-<h1 className="city">{city}</h1>
-<p className="today">Friday 15 Jan</p>
+<h1 className="city">{weather.city}</h1>
+<div className="today"><FormattedDate date={weather.date}/></div>
 <h6 className="temperature">{Math.round(weather.temperature)} °C</h6>
 <img src={weather.icon} alt={weather.description} className="icon"/>
 <p className="message">{weather.description}</p>

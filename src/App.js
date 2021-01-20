@@ -9,7 +9,7 @@ function App() {
         <div className="container" >
         <div className="weather-app-wrapper">
 <div className="weather-app">
-      <Weather/>
+      <Weather />
  
 </div> 
     </div>
