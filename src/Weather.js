@@ -66,13 +66,15 @@ let form =
 if (weather.loaded){
     return(    
     <div>
-{form}
+
 
 <h1 className="city">{weather.city}</h1>
 <div className="today"><FormattedDate date={weather.date}/></div>
 <h6 className="temperature">{Math.round(weather.temperature)} °C</h6>
 <img src={weather.icon} alt={weather.description} className="icon"/>
 <p className="message">{weather.description}</p>
+<p className="humidity">Humidity: {weather.humidity}%</p>
+<p className="wind">Wind: {Math.round(weather.wind)} km/h</p>
     <div className="forecast">
         <button className="next-days">
             02/11
@@ -82,13 +84,32 @@ if (weather.loaded){
         </div>
         </button>
        </div>
+    {form}   
 </div>
 
     );
 }else{
-    return(<div>
-    {form}
-   <CurrentBrussels/>
+    return(
+    <div>
+      <div className="container" >
+        <div className="weather-app-wrapper-page">
+        
+      <h1 className="welcome">Check the weather for today! </h1>
+   <form onSubmit={handleSubmit} >
+  
+    
+      <input className="inputPage" type="search" placeholder="Choose a city" onChange={updateCity} />
+      
+      <button className="searchButtonPage" type="Submit">Search</button>
+    
+      <br/>
+      <p className="orPage">or</p>
+
+      <button className="myLocationPage" type="submit">Use my location</button>
+    </form>
+    </div>
+    </div>
+    
     </div>);
 }
 }
