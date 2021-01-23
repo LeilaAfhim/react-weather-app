@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import axios from "axios";
 import './App.css';
-import CurrentBrussels from "./CurrentBrussels";
 import FormattedDate from "./FormattedDate";
+import TemperatureConversion from "./TemperatureConversion";
 
 
 export default function Weather (props){
@@ -70,6 +70,7 @@ if (weather.loaded){
 
 <h1 className="city">{weather.city}</h1>
 <div className="today"><FormattedDate date={weather.date}/></div>
+ <TemperatureConversion celsius={Math.round(weather.temperature)}/>
 <h6 className="temperature">{Math.round(weather.temperature)} °C</h6>
 <img src={weather.icon} alt={weather.description} className="icon"/>
 <p className="message">{weather.description}</p>
