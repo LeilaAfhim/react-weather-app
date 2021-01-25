@@ -3,6 +3,7 @@ import axios from "axios";
 import './App.css';
 import FormattedDate from "./FormattedDate";
 import TemperatureConversion from "./TemperatureConversion";
+import Forecast from "./Forecast";
 
 
 export default function Weather (props){
@@ -71,20 +72,14 @@ if (weather.loaded){
 <h1 className="city">{weather.city}</h1>
 <div className="today"><FormattedDate date={weather.date}/></div>
  <TemperatureConversion celsius={Math.round(weather.temperature)}/>
-<h6 className="temperature">{Math.round(weather.temperature)} °C</h6>
 <img src={weather.icon} alt={weather.description} className="icon"/>
 <p className="message">{weather.description}</p>
 <p className="humidity">Humidity: {weather.humidity}%</p>
 <p className="wind">Wind: {Math.round(weather.wind)} km/h</p>
-    <div className="forecast">
-        <button className="next-days">
-            02/11
-            <div className="degree">13°C
-            <br/>
-                <img src="https://www.flaticon.com/svg/vstatic/svg/1200/1200430.svg?token=exp=1610880276~hmac=722ad0559e4253aa4080d6278f0ccfd3" width= "10px" className="forecastIcon" alt="iconForecast"/>
-        </div>
-        </button>
-       </div>
+
+<Forecast city={weather.city}/>
+
+    
     {form}   
 </div>
 

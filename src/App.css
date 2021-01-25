@@ -43,7 +43,7 @@
   margin-top: 0px;
 }
 
-.next-days {
+.next-hours {
   border: solid 2px white;
   box-shadow: 3px 3px 10px #bdc2dd;
   border-radius: 10px;
@@ -58,7 +58,7 @@
   max-width: 100%;
 }
 
-.next-days:hover {
+.next-hours:hover {
   cursor: default;
 }
 
@@ -68,6 +68,18 @@
   margin-left: 15px;
   color: #ec6e4c;
   font-family: "Varela Round", sans-serif;
+}
+
+.unit {
+  font-size: 25px;
+  margin: 0;
+  margin-left: 15px;
+  color: #ec6e4c;
+  font-family: "Varela Round", sans-serif;
+}
+
+.separation {
+  color: white;
 }
 
 .icon {
