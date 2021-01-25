@@ -3,7 +3,7 @@ import axios from "axios";
 import './App.css';
 import FormattedDate from "./FormattedDate";
 import TemperatureConversion from "./TemperatureConversion";
-import Forecast from "./Forecast";
+
 
 
 export default function Weather (props){
@@ -47,6 +47,9 @@ function updateCity(event){
 
 
 
+
+
+
 let form = 
 <form onSubmit={handleSubmit} >
   
@@ -55,10 +58,6 @@ let form =
       
       <button className="searchButton" type="Submit">Search</button>
     
-      <br/>
-      <p className="or">or</p>
-
-      <button className="myLocation" type="submit">Use my location</button>
     </form>
 
 
@@ -77,7 +76,7 @@ if (weather.loaded){
 <p className="humidity">Humidity: {weather.humidity}%</p>
 <p className="wind">Wind: {Math.round(weather.wind)} km/h</p>
 
-<Forecast city={weather.city}/>
+
 
     
     {form}   
@@ -98,10 +97,6 @@ if (weather.loaded){
       
       <button className="searchButtonPage" type="Submit">Search</button>
     
-      <br/>
-      <p className="orPage">or</p>
-
-      <button className="myLocationPage" type="submit">Use my location</button>
     </form>
     </div>
     </div>

@@ -6,14 +6,22 @@ export default function Forecast(props) {
 const [loaded, setLoaded]= useState(false);
 const [forecast, setForecast]= useState(null);
 
+function hours(response) {
+    let date = new Date(response.data.dt * 1000);
+    let hours = date.getHours();
+    return `${hours}:00`;
+  }
+ 
+
 
 function handleForecast(response){
 
 setForecast ({
-    temperature: response.data.list[0].main.temp,
-    icon: `https://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}@2x.png`
-    
 
+
+    temperature: response.data.list[0].main.temp,
+    icon: `https://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}@2x.png`,
+ 
 });
 
 setLoaded (true);
@@ -28,6 +36,9 @@ if (loaded){
         <div className="forecast">
 <button className="next-hours">
 
+
+{hours()}
+<br/>
         {Math.round(forecast.temperature)}°C
         <br/>
 <img src={forecast.icon} alt="icon" width="35px"/>
