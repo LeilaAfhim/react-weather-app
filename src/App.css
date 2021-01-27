@@ -129,7 +129,6 @@
 
 .input {
   box-shadow: 3px 3px 10px#bdc2dd;
-
   font-family: "Varela Round", sans-serif;
   font-size: 13px;
   color: #77557a;
@@ -142,7 +141,14 @@
 }
 
 .welcome {
-  color: white;
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 3px;
 }
 
 .inputPage {
