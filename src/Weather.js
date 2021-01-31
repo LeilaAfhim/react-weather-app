@@ -11,7 +11,6 @@ const [city, setCity]= useState("");
   const [weather, setWeather] = useState({loaded:false});
     
     function showTemperature(response) {
-      
     setWeather ({
       loaded: true,
       temperature: response.data.main.temp,
@@ -24,11 +23,6 @@ const [city, setCity]= useState("");
     });
   }  
 
-
-
-
-
-
     function handleSubmit(event){
         event.preventDefault();
         let units = "metric";
@@ -39,68 +33,40 @@ const [city, setCity]= useState("");
     }
 
 
-
 function updateCity(event){
-   
  setCity(event.target.value);
 }
 
-
-
-
-
-
 let form = 
 <form onSubmit={handleSubmit} >
-  
-    
       <input className="input" type="search" placeholder="Choose a city" onChange={updateCity} />
-      
       <button className="searchButton" type="Submit">Search</button>
-    
     </form>
-
-
-
 
 if (weather.loaded){
     return(    
     <div>
-
-
 <h1 className="city">{weather.city}</h1>
 <div className="today"><FormattedDate date={weather.date}/></div>
  <TemperatureConversion celsius={Math.round(weather.temperature)}/>
 <img src={weather.icon} alt={weather.description} className="icon"/>
 <p className="message">{weather.description}</p>
 <p className="humidity">Humidity: {weather.humidity}%</p>
-<p className="wind">Wind: {Math.round(weather.wind)} km/h</p>
-
-
-
-    
+<p className="wind">Wind: {Math.round(weather.wind)} km/h</p>  
     {form}   
-</div>
-
-    );
+</div> );
 }else{
     return(
     <div>
       <div className="container" >
         <div className="weather-app-wrapper-page">
-        
       <h1 className="welcome">Check the weather for today! </h1>
    <form onSubmit={handleSubmit} >
-  
-    
       <input className="inputPage" type="search" placeholder="Choose a city" onChange={updateCity} />
-      
       <button className="searchButtonPage" type="Submit">Search</button>
-    
     </form>
     </div>
     </div>
-    
     </div>);
 }
 }

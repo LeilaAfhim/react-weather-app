@@ -1,4 +1,3 @@
-
 import React from "react";
 
 export default function FormattedDate(props) {
@@ -13,7 +12,5 @@ let month = months[props.date.getMonth()];
     
     return (<div>{day} {date} {month}</div>
 
-    );
-
-    
+    ); 
 }
