@@ -5,26 +5,32 @@
 
 .weather-app {
   max-width: 100%;
-  box-shadow: 5px 5px 15px #bdc2dd;
-  border: 5px solid #ffffff;
+  box-shadow: 5px 5px 15px #c4c1bc;
+
   border-radius: 25px;
   padding: 15px;
-  margin-top: 20px;
+  margin-top: 200px;
   margin-bottom: 20px;
+
   background-color: #e4e4e1;
-  background-image: linear-gradient(
-    -225deg,
-    #5392f0 0%,
-    #b8dcff 55%,
-    #6bbbff 100%
-  );
+  background-image: radial-gradient(
+      at top center,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(0, 0, 0, 0.03) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(143, 152, 157, 0.6) 100%
+    );
+  background-blend-mode: normal, multiply;
 }
 
 .city {
   margin: 0;
   margin-left: 15px;
   margin-top: 20px;
-  color: #ffffff;
+  color: #313131;
   font-size: 40px;
   font-weight: bold;
   font-family: "Varela Round", sans-serif;
@@ -36,7 +42,7 @@
   font-weight: bold;
   font-family: "Varela Round", sans-serif;
   letter-spacing: 3px;
-  color: white;
+  color: #313131;
   margin-bottom: 20px;
   margin-left: 15px;
   margin-top: 0px;
@@ -75,6 +81,11 @@
   margin-left: 15px;
   color: #ec6e4c;
   font-family: "Varela Round", sans-serif;
+}
+
+.Far,
+.Cel {
+  color: #076794;
 }
 
 .separation {
@@ -127,7 +138,7 @@
 }
 
 .input {
-  box-shadow: 3px 3px 10px#bdc2dd;
+  box-shadow: 3px 3px 10px#c4c1bc;
   font-family: "Varela Round", sans-serif;
   font-size: 13px;
   color: #77557a;
@@ -137,13 +148,14 @@
   border-radius: 40px;
   padding: 7px;
   margin-top: 35px;
+  margin-bottom: 12px;
 }
 
 .welcome {
   margin: 0;
   margin-left: 15px;
   margin-top: 20px;
-  color: #ffffff;
+  color: #313131;
   font-size: 40px;
   font-weight: bold;
   font-family: "Varela Round", sans-serif;
@@ -151,7 +163,7 @@
 }
 
 .inputPage {
-  box-shadow: 3px 3px 10px #bdc2dd;
+  box-shadow: 3px 3px 10px #c4c1bc;
   font-family: "Varela Round", sans-serif;
   font-size: 13px;
   color: #77557a;
@@ -166,14 +178,14 @@
 .searchButton {
   display: block;
   margin: auto;
-  box-shadow: 3px 3px 10px #bdc2dd;
+  box-shadow: 3px 3px 10px #c4c1bc;
   margin-bottom: 30px;
   font-family: "Varela Round", sans-serif;
   font-size: 13px;
   color: #ffffff;
   margin-top: 5px;
   max-width: 400px;
-  border: solid 1px white;
+  border: none;
   border-radius: 40px;
   padding: 9px 64px;
   background: #ec6e4c;
@@ -182,14 +194,14 @@
 .searchButtonPage {
   display: block;
   margin: auto;
-  box-shadow: 3px 3px 10px #bdc2dd;
+  box-shadow: 3px 3px 10px #c4c1bc;
   margin-bottom: 30px;
   font-family: "Varela Round", sans-serif;
   font-size: 13px;
   color: #ffffff;
-  margin-top: 5px;
+  margin-top: 12px;
   max-width: 400px;
-  border: solid 1px white;
+  border: none;
   border-radius: 40px;
   padding: 9px 64px;
   background: #ec6e4c;
@@ -251,7 +263,7 @@
 .open-source {
   font-family: "Varela Round", sans-serif;
   margin-left: 35px;
-
+  color: #076794;
   font-size: 16px;
   transition: all 200ms ease-in-out;
 }
@@ -266,7 +278,7 @@
 
 .website {
   font-family: "Varela Round", sans-serif;
-
+  color: #076794;
   font-size: 16px;
   transition: all 200ms ease-in-out;
 }

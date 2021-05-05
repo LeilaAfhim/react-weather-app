@@ -22,7 +22,7 @@ export default function TemperatureConversion(props) {
       <div className="TemperatureConversion">
         <span className="temperature">{Math.round(props.celsius)}</span>
         <span className="unit">°C <span className="separation">|</span> {" "}
-          <a href="/" onClick={showFahrenheit}>
+          <a className="Far" href="/" onClick={showFahrenheit}>
             °F
           </a>
         </span>
@@ -33,7 +33,7 @@ export default function TemperatureConversion(props) {
       <div className="TemperatureConversion">
         <span className="temperature">{Math.round(fahrenheit())}</span>
         <span className="unit">
-          <a href="/" onClick={showCelsius}>°C
+          <a className="Cel" href="/" onClick={showCelsius}>°C
           </a>{" "}<span className="separation">|</span> °F
         </span>
       </div>
